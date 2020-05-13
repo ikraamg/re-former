@@ -1,5 +1,5 @@
 <h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
 <%# <form action="/users" method="post" accept-charset="UTF-8">
   <label for="username">username</label>
   <input type="text" name="user[username]" id="username"><br>
@@ -8,10 +8,12 @@
   <label for="password">password</label>
   <input type="password" name="user[password]" id="password"><br>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
-  <%# <button type="submit">submit</button> %>
+<%# <button type="submit">submit</button> %>
 
 
-<%# </form> %> 
+<%# </form> %>
+
+<% if false %>
 
 <%= form_tag("/users") do %>
 <%= label_tag(name = "Username")%>
@@ -22,3 +24,7 @@
 <%= text_field_tag(name = "user[password]") %>
 <%= submit_tag("Submit") %>
 <% end %>
+
+<% end %>
+
+<%= render partial: "form" %>
