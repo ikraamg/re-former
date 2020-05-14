@@ -1,6 +1,8 @@
 <% if @user %>
-<label>Username:</label> <%= @user.username %> <br />
-<label>Email:</label> <%= @user.email %>
+  <label> Username: </label>
+  <%= @user.username %> <br />
+  <label> Email: </label> 
+  <%= @user.email %>
 <%end%>
 
 <%= link_to "Edit User", edit_user_path(@user) %>
