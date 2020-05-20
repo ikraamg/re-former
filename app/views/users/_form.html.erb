@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+Username:<%= f.text_field :username, placeholder: "John" %> <br>
+Password:<%= f.password_field :password, placeholder: "*****" %> <br>
+Email:<%= f.email_field :email, placeholder: "abc@bcd.com" %>
+<br>
+<%= f.submit "Submit" %>
+
+<% end %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
